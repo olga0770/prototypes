@@ -73,7 +73,7 @@
 
         img:after {
             content: "\f1c5" " " attr(alt);
-            font-size: 0px;
+            font-size: 0;
             color: rgb(100, 100, 100);
             display: block;
             position: absolute;
@@ -273,7 +273,7 @@ try {
 
     $('tr').click(function() {
 
-        var theId = this.id;
+        let theId = this.id;
         console.log('calling the backend with ' + theId);
 
         // blank out content before loading
