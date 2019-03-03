@@ -294,8 +294,11 @@ try {
 
                 $('#theTitleId').text(obj.title);
 
-                let source = "data:image/png;base64, " + obj.image;
-                $('#theImageId').attr("src", source);
+                if (obj.image) {
+                    let source = "data:image/png;base64, " + obj.image;
+                    $('#theImageId').attr("src", source);
+                }
+
             })
             .fail(function() {
                 console.log( "error" );
