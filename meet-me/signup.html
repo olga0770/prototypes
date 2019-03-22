@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>meetMe</title>
+
+
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="home.html">meet<i class="fas fa-heart" style="color: #bf0116;"></i>me</a>
+
+        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false"
+            aria-label="Toggle navigation"><span class="dark-blue-text"><i class="fas fa-bars"
+                    style="color: #bf0116;"></i></span></button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Your account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Log out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</head>
+
+<body class="bg-signup">
+
+    <div class="container">
+        <br>
+        <h2>Make a profile:</h2>
+        <p class="small">* These fields are required</p>
+        <form action="" onsubmit="myFunction()">
+
+            <div class="row">
+                <div class="col-12 col-md-6">
+
+                    <br><label for="profileName"><i class="fas fa-user" style="color: #bf0116;"></i> Profile name *</label>
+                    <input class="form-control" type="text" placeholder="Profile name" required="required">
+
+                    <br><label for="email"><i class="fas fa-envelope" style="color: #bf0116;"></i> E-mail *</label>
+                    <input class="form-control" type="email" placeholder="E-mail" required="required">
+
+                    <br><label for="createPassword"><i class="fas fa-unlock-alt" style="color: #bf0116;"></i> Create password *</label>
+                    <input class="form-control" type="password" placeholder="Create password" required="required">
+
+                    <br><label for="confirmPassword"><i class="fas fa-unlock-alt" style="color: #bf0116;"></i> Confirm password *</label>
+                    <input class="form-control" type="password" placeholder="Confirm password" required="required">
+
+                </div>
+
+                <div class="col-12 col-md-6">
+
+                    <br><label for="Age"> <i class="fas fa-birthday-cake" style="color: #bf0116;"></i> Age</label>
+                    <input class="form-control" type="number" placeholder="Age">
+
+                    <br><label for="gender"><i class="fas fa-male" style="color: #bf0116;"></i><i class="fas fa-female" style="color: #bf0116;"></i> Gender</label>
+                    <select class="form-control">
+                        <option>Choose gender</option>
+                        <option>Man</option>
+                        <option>Woman</option>
+                    </select>
+
+                    <br><label for="gender"><i class="fas fa-male" style="color: #bf0116;"></i><i class="fas fa-female" style="color: #bf0116;"></i> I'm looking for</label>
+                    <select class="form-control">
+                        <option>Choose gender</option>
+                        <option>Man</option>
+                        <option>Woman</option>
+                    </select>
+
+                    <br><label for="photo"><i class="fas fa-image" style="color: #bf0116;"></i> Upload your photo</label><br>
+                    <label class="btn btn-outline-primary btn-block"> Choose file <input type="file" hidden></label>
+
+                </div>
+            </div>
+
+            <br>
+            <div class="form-group">
+                <label for="bio"><i class="fas fa-file-alt" style="color: #bf0116;"></i> Bio</label>
+                <textarea id="form_bio" name="bio" class="form-control" placeholder="Bio" rows="3"></textarea>
+                <div class="help-block with-errors"></div>
+            </div>
+
+            <hr style="background-color: #bf0116;">
+
+            <div class="form-group form-check">
+                <input type="radio" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Yes, you are allowed to process my personal
+                    data.</label><br><br>
+            </div>
+
+            <div class="g-recaptcha" data-sitekey="6LfKURIUAAAAAO50vlwWZkyK_G2ywqE52NU7YO0S"></div>
+
+            <br><input type="submit" class="btn btn-primary btn-lg" value="   SIGN UP   ">
+
+            
+            
+
+
+        </form>
+    </div>
+
+
+    <br>
+
+    <footer>
+        <p class="small">Copyright © 2018 Hotel Scanner. All rights reserved.</p>
+    </footer>
+
+
+
+    <script>
+        function myFunction() {
+          alert("The form was submitted");
+        }
+        </script>
+
+
+
+    <!-- Optional JavaScript -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
