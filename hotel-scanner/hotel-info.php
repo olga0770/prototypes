@@ -20,8 +20,6 @@ if( !$_SESSION['jUser'] ){
 <hr>
 
 <?php
-require 'vendor/autoload.php';
-$client = new MongoDB\Client("mongodb://localhost:27017");
 require_once 'database.php';
 try{
     $sQuery = $db->prepare('SELECT * FROM hotels WHERE id = :iHotelId');
@@ -54,6 +52,8 @@ try{
 
 
 // Mongo DB
+require 'vendor/autoload.php';
+$client = new MongoDB\Client("mongodb://localhost:27017");
 try{
     $collectionReviews = $client->selectCollection('hotel-reviews', 'reviews');
     $ajReviews = $collectionReviews->find();
